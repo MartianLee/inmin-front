@@ -8,7 +8,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <nuxt-link class="navbar-brand" to="/">인민재판</nuxt-link>
+        <nuxt-link class="navbar-brand" to="/">국민재판</nuxt-link>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
