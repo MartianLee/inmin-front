@@ -58,7 +58,7 @@
       </p>
     </div>
     <div class="jumbotron">
-      <div class="text-center">피고인측 변론</div>
+      <div class="text-center">검사측 변론</div>
       <h3>- 경영권 승계</h3>
       <h4>Post 이건희, 삼성의 지상과제</h4>
       <h4>"편법 승계는 우리 사회가 용납하지 않을 것”</h4>
