@@ -72,7 +72,7 @@
       <h3>- 승마지원 재단출연</h3>
       <h4>"삼성, 대통령의 직무상 요구와 자금지원 할 이유가 없다"</h4>
       <p>
-        <a class="btn btn-lg btn-primary" href="http://100.daum.net/encyclopedia/view/33XXXXX53785" role="button">원고 정보보기 »</a>
+        <a class="btn btn-lg btn-primary" href="http://www.sisain.co.kr/?mod=news&act=articleView&idxno=29977" role="button">원고 정보보기 »</a>
       </p>
     </div>
       <div class="jumbotron">
