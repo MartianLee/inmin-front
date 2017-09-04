@@ -50,7 +50,7 @@
     },
     data () {
       return {
-        urlForShare: 'http://220.230.116.98:3000/judges/' + justiceId,
+        urlForShare: 'http://220.230.116.98:3000/judges/' + this.justiceId,
         dataTarget: null
       }
     },
