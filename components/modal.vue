@@ -50,7 +50,7 @@
     },
     data () {
       return {
-        urlForShare: 'https://parkgeunhack.com/',
+        urlForShare: 'http://220.230.116.98:3000/judges/' + justiceId,
         dataTarget: null
       }
     },
