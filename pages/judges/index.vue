@@ -14,7 +14,7 @@
         </div>
         <div class="col-lg-3 col-md-4 col-xs-6">
           <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/300x300" alt="">
+            <i class="fa fa-plus plus" aria-hidden="true"></i>
             <h5> 국민 재판관들의 제보를 기다립니다.</h5>
           </a>
         </div>
@@ -43,4 +43,8 @@
   }
 </script>
 <style>
+  .plus {
+    font-size: 224px;
+  }
+
 </style>

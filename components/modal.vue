@@ -15,7 +15,7 @@
             <h4 class="modal-title">국민재판관 {{ judgeName }}님</h4>
           </div>
           <div class="modal-body">
-            <p>피고 이재용을 {{ judgeYear }}년형을 선고한다.</p>
+            <p>다음과 같이 판결 선고. 주문 피고 이재용을 <b>{{ judgeYear }}년형</b>에 처한다.</p>
           </div>
           <div class="modal-footer">
             <social-sharing :url="urlForShare" inline-template>
