@@ -13,7 +13,7 @@
           </nuxt-link>
         </div>
         <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
+          <a href="https://goo.gl/forms/5l57qLNCoavooe6m2" class="d-block mb-4 h-100" target="_blank">
             <i class="fa fa-plus plus" aria-hidden="true"></i>
             <h5> 국민 재판관들의 제보를 기다립니다.</h5>
           </a>

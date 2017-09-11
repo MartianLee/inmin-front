@@ -18,7 +18,7 @@
             <p>다음과 같이 판결 선고. 주문 피고 이재용을 <b>{{ judgeYear }}년형</b>에 처한다.</p>
           </div>
           <div class="modal-footer">
-            <social-sharing :url="urlForShare" inline-template>
+            <social-sharing :url="urlForShare" :description="descriptionForShare" :quote="descriptionForShare" inline-template>
               <div>
                 <network network="facebook">
                   <i class="fa fa-facebook"></i> Facebook
@@ -51,7 +51,8 @@
     data () {
       return {
         urlForShare: 'slb-473154.ncloudslb.com/judges/' + this.justiceId,
-        dataTarget: null
+        dataTarget: null,
+        descriptionForShare: '다음과 같이 판결 선고. 주문 피고 이재용을 ' + this.judgeYear + '년형에 처한다.'
       }
     },
     components: {
@@ -67,6 +68,8 @@
         } else if (this.judgeYear > 100) {
           alert('100 이하의 값을 입력해 주세요!')
           this.dataTarget = '#asdf'
+        } else if (!Number.isInteger(this.judgeYear * 1)) {
+          alert('숫자를 입력해 주세요!')
         } else {
           this.dataTarget = '#myModal'
           this.$store.dispatch('judge/addJudgement', { 'justiceId': this.justiceId, 'name': this.judgeName, 'penalty': this.judgeYear })
