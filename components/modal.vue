@@ -50,7 +50,7 @@
     },
     data () {
       return {
-        urlForShare: 'https://parkgeunhack.com/',
+        urlForShare: 'slb-473154.ncloudslb.com/judges/' + this.justiceId,
         dataTarget: null
       }
     },
