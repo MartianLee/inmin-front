@@ -14,7 +14,7 @@
         <ul class="nav navbar-nav">
           <li><nuxt-link to="/">Home</nuxt-link></li>
           <li><nuxt-link to="/judges">재판 목록</nuxt-link></li>
-          <li><a href="#">Contact</a></li>
+          <li><nuxt-link to="/contact">Contact</nuxt-link></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->

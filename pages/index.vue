@@ -36,7 +36,7 @@
             <div class="text-center">
               <h4>과연 우리 사회에서 정의란 무엇일까요?</h4>
               <h4>국민재판관님의 판결을 기다립니다.</h4>
-              <nuxt-link to="/judges/1" class="btn btn-lg btn-primary" role="button">지금 판결하기</nuxt-link>
+              <nuxt-link to="/judges/7" class="btn btn-lg btn-primary" role="button">지금 판결하기</nuxt-link>
             </div>
             <div class="first-page-footer">
 
