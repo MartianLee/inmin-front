@@ -1,6 +1,11 @@
+import Cookie from 'cookie'
+import Cookies from 'js-cookie'
 import {getIp} from '../utils/ipApi'
 import {getJustices, getJustice, postJustice, getJudgements, getComments, postComment, getStatistics} from '../utils/judgeApi'
 import {prettyDateFunction} from '../utils/dateConverter'
+
+const inBrowser = typeof window !== 'undefined'
+const SSR = global.__VUE_SSR_CONTEXT__
 
 const judge = {
   namespace: true,
@@ -55,9 +60,18 @@ const judge = {
       })
     },
     addJudgement ({commit}, judgement) {
-      return postJustice(judgement).then(() => {
-        console.log('댓글, 선고 정보 업데이트')
-      })
+      const cookieStr = inBrowser ? document.cookie : SSR.req.headers.cookie
+      const cookies = Cookie.parse(cookieStr || '') || {}
+      const token = cookies.token
+      if (!token) {
+        return postJustice(judgement).then(() => {
+          console.log('선고 정보 업데이트')
+          if (inBrowser) {
+            let expiredDay = 7 / 8
+            Cookies.set('token', judgement.penalty, {expires: expiredDay})
+          }
+        })
+      }
     },
     getJudgements ({commit}, justiceId) {
       return getJudgements(justiceId).then((judgements) => {
@@ -74,7 +88,7 @@ const judge = {
     },
     getStatistics ({commit}, justiceId) {
       return getStatistics(justiceId).then((statistics) => {
-        console.log(statistics)
+        console.log(statistics.data)
         commit('SET_STATISTICS', statistics.data)
       })
     },
