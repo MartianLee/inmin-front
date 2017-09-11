@@ -13,7 +13,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: '국민 여러분이 직접 재판하세요!' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon-96x96.png', sizes: '96x96' }
     ]
   },
   css: [
