@@ -55,7 +55,7 @@
       </p>
     </div>
     <div class="jumbotron">
-      <div class="text-center">피고인측 변론</div>
+      <div class="text-center">검사측 변론</div>
       <h3>- 경영권 승계</h3>
       <h4>Post 이건희, 삼성의 지상과제</h4>
       <h4>"편법 승계는 우리 사회가 용납하지 않을 것”</h4>
@@ -69,7 +69,7 @@
       <h3>- 승마지원 재단출연</h3>
       <h4>"삼성, 대통령의 직무상 요구와 자금지원 할 이유가 없다"</h4>
       <p>
-        <a class="btn btn-lg btn-primary" href="http://100.daum.net/encyclopedia/view/33XXXXX53785" role="button">원고 정보보기 »</a>
+        <a class="btn btn-lg btn-primary" href="http://www.sisain.co.kr/?mod=news&act=articleView&idxno=29977" role="button">원고 정보보기 »</a>
       </p>
     </div>
       <div class="jumbotron">
