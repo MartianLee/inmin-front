@@ -13,9 +13,6 @@
           <h2>피고 {{ justice.undertrial }}</h2>
           <h4>당신의 공정한 판결을 기다립니다.</h4>
         </div>
-        <!--<div class="text-right">-->
-          <!--<a class="btn btn-lg btn-primary btn-sm" href="http://100.daum.net/encyclopedia/view/33XXXXX53785" role="button">피고 정보보기 »</a>-->
-        <!--</div>-->
         <div>
           <h4>피고 : {{ justice.undertrial }}</h4>
           <h4>원고 : {{ justice.prosecutor }} 검사</h4>
@@ -90,14 +87,14 @@
             <!--&gt;</div>-->
           </div>
           <div class="col-xs-6 text-center">
-            <h2><span class="glyphicon glyphicon-fire" aria-hidden="true"></span></h2>
-            <h2>{{ statistics.sumPenalty }}</h2>
-            <h4>총 선고 형량</h4>
+            <h1><span class="glyphicon glyphicon-fire" aria-hidden="true"></span></h1>
+            <h1>{{ statistics.sumPenalty }}</h1>
+            <h3>총 선고 형량</h3>
           </div>
           <div class="col-xs-6 text-center">
-            <h2><span class="glyphicon glyphicon-king" aria-hidden="true"></span></h2>
-            <h2>{{ statistics.averagePenalty }}</h2>
-            <h4>평균 선고 형량</h4>
+            <h1><span class="glyphicon glyphicon-king" aria-hidden="true"></span></h1>
+            <h1>{{ statistics.averagePenalty }}</h1>
+            <h3>평균 선고 형량</h3>
           </div>
         </div>
 
@@ -209,43 +206,13 @@
     },
     mounted () {
       google.charts.load('current', {packages: ['corechart', 'bar']})
-      google.charts.setOnLoadCallback(drawColColors)
-
-      function drawColColors () {
+      .catch(() => { console.log('asdfasdfasdf') })
+      google.charts.setOnLoadCallback(() => {
         var data = new google.visualization.DataTable()
         data.addColumn('number', 'Time of Day')
         data.addColumn('number', 'Motivation Level')
 
-        data.addRows([
-          [
-            1,
-            103
-          ],
-          [
-            3,
-            1
-          ],
-          [
-            4,
-            39
-          ],
-          [
-            33,
-            1
-          ],
-          [
-            50,
-            34
-          ],
-          [
-            99,
-            2
-          ],
-          [
-            100,
-            4
-          ]
-        ])
+        data.addRows(this.$store.state.judge.statistics.totalCountByPenalty)
         var options = {
           title: '판결 통계 그래프',
 
@@ -263,7 +230,7 @@
         }
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'))
         chart.draw(data, options)
-      }
+      })
     },
     computed: mapState({
       justice: state => state.judge.justice,
@@ -333,5 +300,9 @@
 
   .hammer {
     width: 10%;
+  }
+
+  .glyphicon-fire, .glyphicon-king {
+    font-size: 60px;
   }
 </style>
