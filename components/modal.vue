@@ -52,7 +52,7 @@
     },
     data () {
       return {
-        urlForShare: 'slb-473154.ncloudslb.com/judges/' + this.justiceId,
+        urlForShare: 'inmin.me/judges/' + this.justiceId,
         dataTarget: null
       }
     },
