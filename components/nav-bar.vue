@@ -12,8 +12,8 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><nuxt-link to="/judges">재판 목록</nuxt-link></li>
-          <li><nuxt-link to="/contact">연락처</nuxt-link></li>
+          <li><nuxt-link to="/judges" data-toggle="collapse" data-target="#navbar">재판 목록</nuxt-link></li>
+          <li><nuxt-link to="/contact" data-toggle="collapse" data-target="#navbar">연락처</nuxt-link></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
