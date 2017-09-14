@@ -40,37 +40,17 @@
     </div>
     <div class="jumbotron">
       <div class="text-center">피고인측 변론</div>
-      <h3>- 경영권 승계</h3>
-      <h4>"경영권 승계는 신뢰를 확보하는 과정"</h4>
-      <h3>- 증거</h3>
-      <h4>"3차례 독대에서 부정한 청탁이 없었다"</h4>
-      <h3>- 미래전략실</h3>
-      <h4>'계열사의 여러 조직을 위해 일하는 것'</h4>
-      <h3>- 뇌물죄</h3>
-      <h4>뇌물이 아니라 최순실의 강요와 공갈에 의한 피해를 본 것"</h4>
-      <h3>- 승마지원 재단출연</h3>
-      <h4>"승마지원은 최순실의 강요 내지 공갈 때문.. 재단출연, 최순실 배후 알지 못해"</h4>
-      <p>
-        <a class="btn btn-lg btn-primary" href="http://m.mt.co.kr/renew/view.html?no=2017080906008271533&MVRN" role="button">피고 정보보기 »</a>
-      </p>
+      <div v-for="(pleading, index) in justice.pleadings">
+        <h3>- {{ pleading.issue }}</h3>
+        <h4>{{ pleading.attorneyArgument }} <a class="btn btn-primary" :href="pleading.articleUrl" target="_blank" role="button">관련 기사 »</a></h4>
+      </div>
     </div>
     <div class="jumbotron">
       <div class="text-center">검사측 변론</div>
-      <h3>- 경영권 승계</h3>
-      <h4>Post 이건희, 삼성의 지상과제</h4>
-      <h4>"편법 승계는 우리 사회가 용납하지 않을 것”</h4>
-      <h3>- 증거</h3>
-      <h4>"증거들에 의해 사실로 확인됐다"</h4>
-      <h3>- 미래전략실</h3>
-      <h4>'총수의 전위조직’</h4>
-      <h4>"미래전략실 실장은 총수 승인 없이 독단으로 자금을 지원할 수 없다＂</h4>
-      <h3>- 뇌물죄</h3>
-      <h4>"현안 해결에 대한 대통령의 직무상 도움에 대한 대가로 거액의 뇌물"</h4>
-      <h3>- 승마지원 재단출연</h3>
-      <h4>"삼성, 대통령의 직무상 요구와 자금지원 할 이유가 없다"</h4>
-      <p>
-        <a class="btn btn-lg btn-primary" href="http://www.sisain.co.kr/?mod=news&act=articleView&idxno=29977" role="button">원고 정보보기 »</a>
-      </p>
+      <div v-for="(pleading, index) in justice.pleadings">
+        <h3>- {{ pleading.issue }}</h3>
+        <h4>{{ pleading.prosecutorArgument }} <a class="btn btn-primary" :href="pleading.articleUrl" target="_blank" role="button">관련 기사 »</a></h4>
+      </div>
     </div>
       <div class="jumbotron">
         <div class="text-center">
