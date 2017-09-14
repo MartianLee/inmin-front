@@ -3,7 +3,7 @@
     <div class="background">
       <div class="overlay container">
         <div class="page-header first-page-header">
-          <h1>서비스에 대해서 궁금하신 사안은 메일로 보내주세요! 피드백은 얼마든지 환영입니다.</h1>
+          <h1>서비스에 대해서 궁금하신 사안은 inmin.me@gmail.com으로 보내주세요! 피드백은 얼마든지 환영입니다.</h1>
           <h3>더 재판하고 싶은 인물이 있다면 <a href="https://goo.gl/forms/5l57qLNCoavooe6m2" target="_blank">이 링크</a>로 의견을 보내주세요!</h3>
         </div>
         <div class="bd-pageheader">
