@@ -10,7 +10,7 @@
 
         <!-- Modal content-->
         <div class="modal-content">
-          <div class="text-center"><img src="../assets/ljy.jpeg"/></div>
+          <div class="text-center"><img :src="undertrialPhotoUrl"/></div>
           <div class="modal-header">
             <h4 class="modal-title">국민재판관 {{ judgeName }}님</h4>
           </div>
@@ -18,6 +18,7 @@
             <p>다음과 같이 판결 선고. 주문 피고 이재용을 <b>{{ judgeYear }}년형</b>에 처한다.</p>
           </div>
           <div class="modal-footer">
+            소셜 네트워크에서 공유해 다른 친구들도 판결하게 해주세요!
             <social-sharing :url="urlForShare" :description="descriptionForShare" :quote="descriptionForShare" inline-template>
               <div>
                 <network network="facebook">
@@ -46,13 +47,18 @@
     props: {
       justiceId: null,
       judgeYear: null,
-      judgeName: null
+      judgeName: null,
+      undertrialPhotoUrl: null
     },
     data () {
       return {
         urlForShare: 'slb-473154.ncloudslb.com/judges/' + this.justiceId,
-        dataTarget: null,
-        descriptionForShare: '다음과 같이 판결 선고. 주문 피고 이재용을 ' + this.judgeYear + '년형에 처한다.'
+        dataTarget: null
+      }
+    },
+    computed: {
+      descriptionForShare: function () {
+        return '다음과 같이 판결 선고. 주문 피고 이재용을 ' + this.judgeYear + '년형에 처한다.'
       }
     },
     components: {

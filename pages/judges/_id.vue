@@ -34,19 +34,19 @@
           </h3>
         </div>
         <div class="text-center lead">
-          <modal :judgeYear="judgeYear" :judgeName="judgeName" :justiceId="justice.id"></modal>
+          <modal :judgeYear="judgeYear" :judgeName="justice.title" :justiceId="justice.id" :undertrialPhotoUrl="justice.undertrialPhotoUrl"></modal>
         </div>
       </div>
     </div>
     <div class="jumbotron">
-      <div class="text-center">피고인측 변론</div>
+      <div class="text-center"><h2>피고인측 변론</h2></div>
       <div v-for="(pleading, index) in justice.pleadings">
         <h3>- {{ pleading.issue }}</h3>
         <h4>{{ pleading.attorneyArgument }} <a class="btn btn-primary" :href="pleading.articleUrl" target="_blank" role="button">관련 기사 »</a></h4>
       </div>
     </div>
     <div class="jumbotron">
-      <div class="text-center">검사측 변론</div>
+      <div class="text-center"><h2>검사측 변론</h2></div>
       <div v-for="(pleading, index) in justice.pleadings">
         <h3>- {{ pleading.issue }}</h3>
         <h4>{{ pleading.prosecutorArgument }} <a class="btn btn-primary" :href="pleading.articleUrl" target="_blank" role="button">관련 기사 »</a></h4>
