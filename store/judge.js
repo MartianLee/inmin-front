@@ -63,12 +63,17 @@ const judge = {
       const cookieStr = inBrowser ? document.cookie : SSR.req.headers.cookie
       const cookies = Cookie.parse(cookieStr || '') || {}
       const token = cookies.token
-      if (!token) {
+      let judgeIds = token ? token.split(' ') : ''
+      if (!judgeIds || !judgeIds.find((judgeId) => { return parseInt(judgeId) === judgement.justiceId })) {
         return postJustice(judgement).then(() => {
           console.log('선고 정보 업데이트')
           if (inBrowser) {
             let expiredDay = 7 / 8
-            Cookies.set('token', judgement.penalty, {expires: expiredDay})
+            if (!token) {
+              Cookies.set('token', judgement.justiceId, {expires: expiredDay})
+            } else {
+              Cookies.set('token', token + ' ' + parseInt(judgement.justiceId), {expires: expiredDay})
+            }
           }
         })
       }

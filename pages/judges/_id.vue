@@ -34,7 +34,7 @@
           </h3>
         </div>
         <div class="text-center lead">
-          <modal :judgeYear="judgeYear" :judgeName="justice.title" :justiceId="justice.id" :undertrialPhotoUrl="justice.undertrialPhotoUrl"></modal>
+          <modal :judgeYear="judgeYear" :judgeName="judgeName" :justiceId="justice.id" :undertrialPhotoUrl="justice.undertrialPhotoUrl"></modal>
         </div>
       </div>
     </div>
